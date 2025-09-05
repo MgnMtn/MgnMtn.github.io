@@ -1,115 +1,98 @@
 ---
 ---
 
-@string{aps = {American Physical Society,}}
-
-@book{einstein1920relativity,
-  title={Relativity: the Special and General Theory},
-  author={Einstein, Albert},
-  year={1920},
-  publisher={Methuen & Co Ltd},
-  html={relativity.html}
+@inproceedings{Maton2025,
+  author = {Megan Maton and Gregory M. Kapfhammer and Phil McMinn},
+  title = {Where tests fall short: Empirically analyzing oracle gaps in covered code},
+  booktitle = {Proceedings of the 19th International Symposium on Empirical Software Engineering and Measurement},
+  year = {2025},
+  abstract = {<em>Background</em>: Developers often rely on statement coverage
+  to assess test suite quality. However, statement coverage alone may only lead
+  to 10% fault detection, necessitating more rigorous approaches. While
+  mutation testing is effective, its execution and human analysis costs
+  remain high. Identifying covered statements that are not checked by oracles
+  (e.g., assertions) offers a cost-effective alternative; however, the lack of
+  empirical evidence for selecting the appropriate Oracle Gap Calculation
+  Approach (OGCA) prevents developers from making informed choices.
+  <em>Aims</em>: This knowledge-seeking study compares oracle gap
+  characteristics determined by different OGCAs to assist developers in
+  choosing the most valuable approach for their use cases. <em>Method</em>:
+  Using mixed-method empirical analysis, we conduct an in-depth evaluation of
+  the oracle gaps produced using three OGCAs: Checked Coverage using a Dynamic
+  Slicer (CCDS), Checked Coverage using an Observational Slicer (CCOS), and
+  Pseudo-Tested Statement Identification (PTSI). Across 30 Java classes from
+  six open-source projects, we report on a quantitative evaluation of gap
+  prominence, distribution, fault detection correlation and execution times,
+  as well as results from a qualitative manual inspection of the statement
+  types found in the oracle gaps. <em>Results</em>: The qualitative analysis
+  showed data-loading statements, iteration statements and output updates to be
+  most prominent in the oracle gaps. PTSI identified the oracle gaps with the
+  lowest median mutation score (0.32), highlighting areas requiring more fault
+  detection improvement compared to CCDS (0.76) and CCOS (0.50). PTSI also had
+  the shortest median execution time (19.9 seconds), far quicker than both CCDS
+  (273.2 seconds) and CCOS (5957.1 seconds). <em>Conclusions</em>: PTSI quickly
+  reveals the priority testing areas for improved fault detection, making it an
+  effective OGCA for developers to identify where tests fall short },
+  data = {https://github.com/PseudoTested/esem-2025-replication-package},
+  tool = {https://github.com/PseudoTested/PseudoSweep},
 }
 
-@book{einstein1956investigations,
-  bibtex_show={true},
-  title={Investigations on the Theory of the Brownian Movement},
-  author={Einstein, Albert},
-  year={1956},
-  publisher={Courier Corporation},
-  preview={brownian-motion.gif}
+@inproceedings{Maton2024,
+  author = {Megan Maton and Gregory M. Kapfhammer and Phil McMinn},
+  title = {Exploring pseudo-testedness: Empirically evaluating extreme mutation testing at the statement level},
+  booktitle = {Proceedings of the 40th International Conference on Software Maintenance and Evolution},
+  year = {2024},
+  abstract = {Extreme mutation testing (XMT) detects undesirable
+  pseudo-testedness in a program by deleting the method bodies of covered code
+  and observing whether the test suite can detect their absence. Even though
+  XMT may identify test limitations, its coarse granularity means that it may
+  overlook testing inadequacies, particularly at the statement level, that
+  developers may want to address before committing the resources demanded by
+  traditional mutation testing. This paper proposes the use of the statement
+  deletion mutation operator (SDL) to uncover pseudo-tested statements in
+  addition to complete methods. In an experimental evaluation involving four
+  frequently-studied, large, Apache Commons Java projects and 23 projects
+  randomly selected from the Maven Central Repository, we found 722 different
+  cases of pseudo-tested statements. Critically, we discovered that 48% of
+  these statements exist outside of pseudo-tested methods, meaning that the
+  detection of testing deficiencies related to these statements would normally
+  be left to traditional, resource-intensive, mutation testing. Also, we found
+  that a popular Java mutation testing tool would not have mutated some of the
+  statement types involved in the first place, effectively rendering these
+  issues, hitherto, hard to discover. This paper therefore demonstrates that
+  XMT alone is insufficient and should be combined with pseudo-tested statement
+  evaluation to pinpoint subtle, yet important, testing oversights that a
+  developer should tackle before applying traditional mutation testing.},
+  tool = {https://github.com/PseudoTested/PseudoSweep},
+  presentation = {
+                 https://speakerdeck.com/gkapfham/exploring-pseudo-testedness-empirically-evaluating-extreme-mutation-testing-at-the-statement-level 
+                 },
+  presented = {true},
 }
 
-@article{einstein1950meaning,
-  abbr={AJP},
-  bibtex_show={true},
-  title={The meaning of relativity},
-  author={Einstein, Albert and Taub, AH},
-  journal={American Journal of Physics},
-  volume={18},
-  number={6},
-  pages={403--404},
-  year={1950},
-  publisher={American Association of Physics Teachers}
+@inproceedings{Maton2024a,
+  author = {Megan Maton and Gregory M. Kapfhammer and Phil McMinn},
+  title = {PseudoSweep: A pseudo-tested code identifier},
+  booktitle = {Proceedings of the 40th International Conference on Software Maintenance and Evolution --  Tool Demonstrations Track},
+  year = {2024},
+  abstract = {Software testing remains a crucial practice for ensuring and
+            maintaining code quality. Yet, a critical issue remains: the
+            existence of pseudo-tested statements. Tests cover these statements,
+            but removing them does not trigger test failures. Since no
+            established tools address this challenge, this paper introduces
+            PseudoSweep, a novel tool that automatically identifies pseudotested
+            methods and statements in Java projects. PseudoSweep combines method
+            and statement deletion techniques to reveal these maintenance
+            problems. In addition to explaining the approach used by
+            PseudoSweep, this paper details use-cases and overviews results from
+            experiments with PseudoSweep. The tool is available (including
+            set-up instructions and examples) at
+            https://github.com/PseudoTested/PseudoSweep and there is a video
+            demonstration at https://youtu.be/5QCsu7MbiXI.},
+  tool = {https://github.com/PseudoTested/PseudoSweep},
+  presentation = {
+                 https://speakerdeck.com/gkapfham/pseudosweep-a-pseudo-tested-code-identifier 
+                 },
+  presented = {true},
 }
 
-@article{PhysRev.47.777,
-  abbr={PhysRev},
-  title={Can Quantum-Mechanical Description of Physical Reality Be Considered Complete?},
-  author={Einstein*†, A. and Podolsky*, B. and Rosen*, N.},
-  abstract={In a complete theory there is an element corresponding to each element of reality. A sufficient condition for the reality of a physical quantity is the possibility of predicting it with certainty, without disturbing the system. In quantum mechanics in the case of two physical quantities described by non-commuting operators, the knowledge of one precludes the knowledge of the other. Then either (1) the description of reality given by the wave function in quantum mechanics is not complete or (2) these two quantities cannot have simultaneous reality. Consideration of the problem of making predictions concerning a system on the basis of measurements made on another system that had previously interacted with it leads to the result that if (1) is false then (2) is also false. One is thus led to conclude that the description of reality as given by a wave function is not complete.},
-  journal={Phys. Rev.},
-  location={New Jersey},
-  volume={47},
-  issue={10},
-  pages={777--780},
-  numpages={0},
-  year={1935},
-  month={May},
-  publisher=aps,
-  doi={10.1103/PhysRev.47.777},
-  url={http://link.aps.org/doi/10.1103/PhysRev.47.777},
-  html={https://journals.aps.org/pr/abstract/10.1103/PhysRev.47.777},
-  pdf={example_pdf.pdf},
-  altmetric={248277},
-  dimensions={true},
-  google_scholar_id={qyhmnyLat1gC},
-  video={https://www.youtube-nocookie.com/embed/aqz-KE-bpKQ},
-  additional_info={. *More Information* can be [found here](https://github.com/alshedivat/al-folio/)},
-  annotation={* Example use of superscripts<br>† Albert Einstein},
-  selected={true},
-  inspirehep_id = {3255}
-}
-
-@article{einstein1905molekularkinetischen,
-  title={{\"U}ber die von der molekularkinetischen Theorie der W{\"a}rme geforderte Bewegung von in ruhenden Fl{\"u}ssigkeiten suspendierten Teilchen},
-  author={Einstein, A.},
-  journal={Annalen der physik},
-  volume={322},
-  number={8},
-  pages={549--560},
-  year={1905},
-  publisher={Wiley Online Library}
-}
-
-@article{einstein1905movement,
-  abbr={Ann. Phys.},
-  title={Un the movement of small particles suspended in statiunary liquids required by the molecular-kinetic theory 0f heat},
-  author={Einstein, A.},
-  journal={Ann. Phys.},
-  volume={17},
-  pages={549--560},
-  year={1905}
-}
-
-@article{einstein1905electrodynamics,
-  title={On the electrodynamics of moving bodies},
-  author={Einstein, A.},
-  year={1905}
-}
-
-@Article{einstein1905photoelectriceffect,
-  bibtex_show={true},
-  abbr={Ann. Phys.},
-  title="{{\"U}ber einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt}",
-  author={Albert Einstein},
-  abstract={This is the abstract text.},
-  journal={Ann. Phys.},
-  volume={322},
-  number={6},
-  pages={132--148},
-  year={1905},
-  doi={10.1002/andp.19053220607},
-  award={Albert Einstein receveid the **Nobel Prize in Physics** 1921 *for his services to Theoretical Physics, and especially for his discovery of the law of the photoelectric effect*},
-  award_name={Nobel Prize}
-}
-
-@book{przibram1967letters,
-  bibtex_show={true},
-  title={Letters on wave mechanics},
-  author={Einstein, Albert and Schrödinger, Erwin and Planck, Max and Lorentz, Hendrik Antoon and Przibram, Karl},
-  year={1967},
-  publisher={Vision},
-  preview={wave-mechanics.gif},
-  abbr={Vision}
-}
