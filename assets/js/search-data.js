@@ -26,13 +26,6 @@ ninja.data = [{
           title: '🇺🇸 Had a great time at ESEM 2025 in Honolulu, Hawaii, as a...',
           description: "",
           section: "News",},{
-        id: 'social-email',
-        title: 'email',
-        section: 'Socials',
-        handler: () => {
-          window.open("mailto:%6D%65%6D%61%74%6F%6E%31@%73%68%65%66%66%69%65%6C%64.%61%63.%75%6B", "_blank");
-        },
-      },{
         id: 'social-github',
         title: 'GitHub',
         section: 'Socials',
