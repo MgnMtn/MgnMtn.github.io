@@ -5,5 +5,5 @@ inline: true
 related_posts: false
 ---
 
-Enjoyed our time in Flagstaff, Arizona at [ICSME 2024](https://conf.researchr.org/home/icsme-2024) presenting our papers "
+🇺🇸 Enjoyed our time in Flagstaff, Arizona at [ICSME 2024](https://conf.researchr.org/home/icsme-2024) presenting our papers "
 Exploring pseudo-testedness: Empirically evaluating extreme mutation testing at the statement level" and "PseudoSweep: A pseudo-tested code identifier".
