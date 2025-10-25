@@ -16,13 +16,6 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/publications/";
           },
-        },{id: "nav-cv",
-          title: "cv",
-          description: "This is a description of the page. You can modify it in &#39;_pages/cv.md&#39;. You can also change or remove the top pdf download button.",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/cv/";
-          },
         },{id: "news-enjoyed-our-time-in-flagstaff-arizona-at-icsme-2024-presenting-our-papers-exploring-pseudo-testedness-empirically-evaluating-extreme-mutation-testing-at-the-statement-level-and-pseudosweep-a-pseudo-tested-code-identifier",
           title: 'Enjoyed our time in Flagstaff, Arizona at ICSME 2024 presenting our papers “...',
           description: "",
