@@ -40,13 +40,6 @@ ninja.data = [{
           window.open("https://www.linkedin.com/in/mgnmtn", "_blank");
         },
       },{
-        id: 'social-orcid',
-        title: 'ORCID',
-        section: 'Socials',
-        handler: () => {
-          window.open("https://orcid.org/0009-0005-8817-4279", "_blank");
-        },
-      },{
         id: 'social-scholar',
         title: 'Google Scholar',
         section: 'Socials',
