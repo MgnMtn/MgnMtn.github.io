@@ -1,6 +1,6 @@
 ---
 layout: about
-title: about
+title: home
 permalink: /
 subtitle: PhD Student in Software Testing
 
@@ -25,5 +25,6 @@ latest_posts:
 ---
 
 
-Hi there! I am Megan, a PhD Student in the [Software Testing group](https://sheffield.ac.uk/cs/research/groups/testing) at the University of Sheffield. My research focuses on revealing weak test oracles in Software Testing. 
+Hi there! I am Megan, a PhD Student in the [Software Testing group](https://sheffield.ac.uk/cs/research/groups/testing) at the University of Sheffield. 
+My research focuses on revealing weak test oracles in Software Testing. 
 
