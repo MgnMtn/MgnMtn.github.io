@@ -24,14 +24,14 @@
     - title: BSc Computer Science w/ Year in Industry
       institution: University of Sheffield, South Yorkshire, United Kingdom
       year: 2018-2022
-      description: 
+      description:
         - First Class (Highest Classification)
         - title: Relevant Modules.
           contents:
             - Software Testing and Analysis (Grade 83%).
             - Software Re-engineering (Grade 78%)
             - Software Hut (Grade 88%).
-        
+
 - title: Experience
   type: time_table
   contents:
@@ -73,7 +73,6 @@
     #   institution: CGI Ltd
     #   year: 2020-2021
     #   description: Placement student working within safety critical project. Worked on developing features for internal tools and as part of a Test Team, designing test scenarios for the safety critical project.
-
 
 - title: Other Interests
   type: list
