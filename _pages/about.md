@@ -27,6 +27,7 @@ latest_posts:
 Hi there! I am Megan, a **final-year PhD Student** in the [AI x Software Engineering and Testing (ASET) group](https://sheffield.ac.uk/cs/research/groups/testing) at the University of Sheffield, supervised by [Phil McMinn](https://philmcminn.com/) and [Gregory M. Kapfhammer](https://www.gregorykapfhammer.com/).
 
 My reserach interests include:
+
 - Software testing
 - Mutation testing
 - AI for Software Engineering
