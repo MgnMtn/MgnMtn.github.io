@@ -34,7 +34,7 @@ My research interests include:
 - AI for Software Engineering
 
 My recent work studies the use of LLMs to perturb code descriptions using hazard analysis for guiding method level mutation testing.
-I have also recently studied **pseudo-tested statements**, which are statements that are executed by a test case, yet if one of these statements is removed, the test cases continue to pass.
+I am also interested in understanding **pseudo-tested statements**, which are statements that are executed by a test case, yet if one of these statements is removed, the test cases continue to pass.
 These areas highlight gaps in the test suites to developers, such as **missing assertions** and test cases.
 
 When I am not at the university, I enjoy volunteering with [Girlguiding UK](https://www.girlguiding.org.uk/) to run camps and events for young people.
