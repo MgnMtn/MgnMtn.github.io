@@ -33,7 +33,7 @@ My research interests include:
 - Mutation testing
 - AI for Software Engineering
 
-My recent work has studied using LLMs to perturb code descriptions using hazard analysis to guide method level mutation testing.
+My recent work studies the use of LLMs to perturb code descriptions using hazard analysis for guiding method level mutation testing.
 I have also recently studied **pseudo-tested statements**, which are statements that are executed by a test case, yet if one of these statements is removed, the test cases continue to pass.
 These areas highlight gaps in the test suites to developers, such as **missing assertions** and test cases.
 
