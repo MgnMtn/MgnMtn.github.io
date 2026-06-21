@@ -24,17 +24,17 @@ latest_posts:
   limit: 4 # leave blank to include all the blog posts
 ---
 
-Hi there! I am Megan, a **final-year PhD Student** in the [AI x Software Engineering and Testing (ASET) group](https://sheffield.ac.uk/cs/research/groups/testing) at the University of Sheffield, supervised by [Phil McMinn](https://philmcminn.com/) and [Gregory M. Kapfhammer](https://www.gregorykapfhammer.com/).
+Hi there! I am Megan, a **Research Associate** in the [AI x Software Engineering and Testing (ASET) group](https://sheffield.ac.uk/cs/research/groups/testing) at the University of Sheffield.
+My PhD has been supervised by [Phil McMinn](https://philmcminn.com/) and [Gregory M. Kapfhammer](https://www.gregorykapfhammer.com/).
 
-My reserach interests include:
+My research interests include:
 
 - Software testing
 - Mutation testing
 - AI for Software Engineering
 
-My recent work studied **pseudo-tested statements**, which are statements that are executed by a test case, yet if one of these statements is removed, the test cases continue to pass.
+My recent work studies the use of LLMs to perturb code descriptions using hazard analysis for guiding method level mutation testing.
+I am also interested in understanding **pseudo-tested statements**, which are statements that are executed by a test case, yet if one of these statements is removed, the test cases continue to pass.
 These areas highlight gaps in the test suites to developers, such as **missing assertions** and test cases.
-
-Alongside my research, I work as a Graduate Teaching Assistant for the **Software Testing and Analysis** module, where I support students in understanding and applying key concepts.
 
 When I am not at the university, I enjoy volunteering with [Girlguiding UK](https://www.girlguiding.org.uk/) to run camps and events for young people.
