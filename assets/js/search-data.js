@@ -31,6 +31,9 @@ ninja.data = [{
           section: "News",},{id: "news-excited-to-have-our-paper-empirically-comparing-hazard-guided-llm-mutation-techniques-with-existing-llm-and-rule-based-approaches-accepted-at-ease-2026",
           title: '✅ Excited to have our paper “Empirically Comparing Hazard-Guided LLM Mutation Techniques with...',
           description: "",
+          section: "News",},{id: "news-looking-forward-to-attending-ase-2026-and-presenting-multiplex-our-llm-based-mutation-tool-in-the-tool-and-datasets-track",
+          title: '✅ Looking forward to attending ASE 2026 and presenting “Multiplex” our LLM-based Mutation...',
+          description: "",
           section: "News",},{
         id: 'social-github',
         title: 'GitHub',
