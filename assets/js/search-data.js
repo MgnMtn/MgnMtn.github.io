@@ -34,6 +34,9 @@ ninja.data = [{
           section: "News",},{id: "news-looking-forward-to-attending-ase-2026-and-presenting-multiplex-our-llm-based-mutation-tool-in-the-tool-and-datasets-track",
           title: '✅ Looking forward to attending ASE 2026 and presenting “Multiplex” our LLM-based Mutation...',
           description: "",
+          section: "News",},{id: "news-pleased-to-say-i-passed-my-phd-viva-today-with-minor-corrections-my-work-focused-on-investigating-the-relationships-between-mutants-oracles-and-pseudo-testedness-thank-you-to-ajitha-rajan-university-of-edinburgh-and-tony-simons-university-of-sheffield-for-examining-my-thesis-and-for-the-interesting-discussions",
+          title: '🥳 Pleased to say I passed my PhD Viva today with minor corrections....',
+          description: "",
           section: "News",},{
         id: 'social-github',
         title: 'GitHub',
