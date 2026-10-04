@@ -6,5 +6,3 @@ related_posts: false
 ---
 
 👩‍💻 Looking forward to starting my new role as a Research Associate in Flaky Tests in the [AI x Software Engineering and Testing group](https://sheffield.ac.uk/cs/research/groups/aset) at the University of Sheffield!
-
-
