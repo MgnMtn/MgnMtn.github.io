@@ -2,7 +2,7 @@
 layout: about
 title: Home
 permalink: /
-subtitle: Research Associate in Software Testing 
+subtitle: Research Associate in Software Testing
 
 profile:
   align: right
