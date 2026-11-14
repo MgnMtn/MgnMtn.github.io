@@ -1,11 +1,13 @@
 ---
 layout: page
 title: Software
-permalink: /projects/
+permalink: /software/
 description: Software from my research and interests
 nav: true
 nav_order: 3
 github_user: MgnMtn
+contribution_badges:
+  RoguePenguin06/PlateRace: hackathon
 ---
 
 <!-- pages/projects.md -->
@@ -26,6 +28,7 @@ github_user: MgnMtn
     id="repo-contributions"
     class="row row-cols-1 row-cols-md-2"
     data-user="{{ page.github_user }}"
+    data-badges="{{ page.contribution_badges | jsonify | escape }}"
     data-exclude="{% for p in site.projects %}{% if p.github %}{{ p.github | downcase }} {% endif %}{% endfor %}{% for pkg in site.data.replication_packages %}{{ pkg.github | downcase }} {% endfor %}"
   >
     <div class="col repo-empty">Loading contributions from GitHub…</div>
@@ -61,6 +64,8 @@ github_user: MgnMtn
     var box = document.getElementById("repo-contributions");
     var user = box.dataset.user;
     var exclude = box.dataset.exclude.split(" ").filter(Boolean);
+    var badges = {};
+    try { badges = JSON.parse(box.dataset.badges) || {}; } catch (e) {}
     var allPrsUrl = "https://github.com/pulls?q=is%3Apr+is%3Amerged+author%3A" + user;
     var langColors = { Python: "#3572A5", Java: "#b07219", JavaScript: "#f1e05a", TypeScript: "#3178c6", C: "#555555", "C++": "#f34b7d", Rust: "#dea584", Go: "#00ADD8", Kotlin: "#A97BFF", R: "#198CE7", Shell: "#89e051", HTML: "#e34c26", TeX: "#3D6117", "Jupyter Notebook": "#DA5B0B" };
     var repoIcon = '<svg class="repo-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path></svg>';
@@ -96,7 +101,7 @@ github_user: MgnMtn
             return '<div class="col"><div class="repo-card h-100">' +
               '<div class="repo-card-header">' + repoIcon +
               '<a class="repo-name" href="https://github.com/' + esc(c.name) + '">' + esc(c.name) + "</a>" +
-              '<span class="repo-badge">contribution</span></div>' +
+              '<span class="repo-badge">' + esc(badges[c.name] || "contribution") + "</span></div>" +
               (i.description ? '<p class="repo-desc">' + esc(i.description) + "</p>" : '<p class="repo-desc"></p>') +
               '<div class="repo-meta">' +
               (lang ? '<span class="repo-meta-item"><span class="repo-lang-dot" style="background-color:' + (langColors[lang] || "#8b949e") + '"></span>' + esc(lang) + "</span>" : "") +
