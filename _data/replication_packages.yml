@@ -1,0 +1,32 @@
+# Replication packages shown on the Software page, newest first.
+# Fields: github (owner/repo), venue, paper (title), language, doi (optional).
+# Without a doi, the paper link goes to the Publications page.
+
+- github: LLM-Mutation/ase-2026-replication-package
+  venue: ASE 2026
+  paper: "multiplex: A Modular LLM-based Mutation Framework"
+  language: Python
+
+- github: LLM-Mutation/ease-2026-replication-package
+  venue: EASE 2026
+  paper: Empirically Comparing Hazard-Guided LLM Mutation Techniques with Existing LLM- and Rule-Based Approaches
+  language: Java
+
+- github: PseudoTested/esem-2025-replication-package
+  venue: ESEM 2025
+  paper: "Where tests fall short: Empirically analyzing oracle gaps in covered code"
+  language: HTML
+  doi: 10.1109/ESEM64174.2025.00063
+
+- github: PseudoTested/icsme-2024-replication-package
+  venue: ICSME 2024
+  paper: "Exploring pseudo-testedness: Empirically evaluating extreme mutation testing at the statement level"
+  language: Python
+  doi: 10.1109/ICSME58944.2024.00059
+
+- github: PseudoTested/pseudosweep-demo
+  venue: ICSME 2024
+  paper: "PseudoSweep: A pseudo-tested code identifier"
+  description: "Demo for “PseudoSweep: A pseudo-tested code identifier”"
+  language: Java
+  doi: 10.1109/ICSME58944.2024.00094
