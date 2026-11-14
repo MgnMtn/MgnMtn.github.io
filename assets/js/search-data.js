@@ -16,6 +16,13 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/publications/";
           },
+        },{id: "nav-software",
+          title: "Software",
+          description: "Software from my research and interests",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/software/";
+          },
         },{id: "news-enjoyed-our-time-in-flagstaff-arizona-at-icsme-2024-presenting-our-papers-exploring-pseudo-testedness-empirically-evaluating-extreme-mutation-testing-at-the-statement-level-and-pseudosweep-a-pseudo-tested-code-identifier",
           title: '🇺🇸 Enjoyed our time in Flagstaff, Arizona at ICSME 2024 presenting our papers...',
           description: "",
@@ -43,7 +50,27 @@ ninja.data = [{
           section: "News",},{id: "news-good-week-in-munich-at-ase-2026-great-to-have-four-of-the-aset-lab-presenting-our-work-throughout-the-conference-see-some-photos-on-the-aset-group-website",
           title: '📣 Good week in Munich at ASE 2026. Great to have four of...',
           description: "",
-          section: "News",},{
+          section: "News",},{id: "projects-flakefighters",
+          title: 'FlakeFighters',
+          description: "Detecting and Classifying Flaky Tests",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/flaky-tests/";
+            },},{id: "projects-llm-based-mutation-testing",
+          title: 'LLM-based Mutation Testing',
+          description: "Generating context aware mutants using hazard analysis!",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/llm-mutation/";
+            },},{id: "projects-pi-ggy-bank",
+          title: 'Pi-ggy Bank',
+          description: "A money box that counts your coins with computer vision. 1st place, Best Hack at hackSheffield 5.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/pi-ggy-bank/";
+            },},{id: "projects-identifying-pseudo-tested-statements",
+          title: 'Identifying Pseudo-tested Statements',
+          description: "Deleting code statements to see if the test suite notices!",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/pseudo-tested/";
+            },},{
         id: 'social-github',
         title: 'GitHub',
         section: 'Socials',
