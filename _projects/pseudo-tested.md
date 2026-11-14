@@ -29,4 +29,3 @@ Pseudo-tested statement identification found the gaps that most need attention (
 score) and was by far the quickest, with a median of about 20 seconds compared
 with minutes, hours or days for the
 slicing-based approaches {% cite Maton2025 %}.
-
