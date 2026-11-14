@@ -79,6 +79,7 @@ contribution_links:
     var langColors = { Python: "#3572A5", Java: "#b07219", JavaScript: "#f1e05a", TypeScript: "#3178c6", C: "#555555", "C++": "#f34b7d", Rust: "#dea584", Go: "#00ADD8", Kotlin: "#A97BFF", R: "#198CE7", Shell: "#89e051", HTML: "#e34c26", TeX: "#3D6117", "Jupyter Notebook": "#DA5B0B" };
     var repoIcon = '<svg class="repo-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path></svg>';
     var prIcon = '<svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M5.45 5.154A4.25 4.25 0 0 0 9.25 7.5h1.378a2.251 2.251 0 1 1 0 1.5H9.25A5.734 5.734 0 0 1 5 7.123v3.505a2.25 2.25 0 1 1-1.5 0V5.372a2.25 2.25 0 1 1 1.95-.218ZM4.25 13.5a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm8.5-4.5a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM5 3.25a.75.75 0 1 0 0 .001Z"></path></svg>';
+    var starIcon = '<svg viewBox="0 0 16 16" width="16" height="16" aria-label="stars"><path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Z"></path></svg>';
     function esc(s) {
       var d = document.createElement("div");
       d.textContent = s == null ? "" : String(s);
@@ -114,6 +115,7 @@ contribution_links:
               (i.description ? '<p class="repo-desc">' + esc(i.description) + "</p>" : '<p class="repo-desc"></p>') +
               '<div class="repo-meta">' +
               (lang ? '<span class="repo-meta-item"><span class="repo-lang-dot" style="background-color:' + (langColors[lang] || "#8b949e") + '"></span>' + esc(lang) + "</span>" : "") +
+              (i.stargazers_count > 0 ? '<span class="repo-meta-item repo-stars">' + starIcon + '<span class="count">' + i.stargazers_count + "</span></span>" : "") +
               '<a class="repo-meta-item" href="' + prsUrl + '">' + prIcon + c.count + " merged pull request" + (c.count === 1 ? "" : "s") + "</a>" +
               (links[c.name] || []).map(function (l) {
                 return '<a class="repo-meta-item" href="' + esc(l.url) + '">' + linkIcon + esc(l.name) + "</a>";
