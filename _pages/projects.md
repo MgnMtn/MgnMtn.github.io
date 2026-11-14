@@ -8,6 +8,11 @@ nav_order: 3
 github_user: MgnMtn
 contribution_badges:
   RoguePenguin06/PlateRace: hackathon
+# Extra links for a contribution card, keyed by owner/repo.
+contribution_links:
+  RoguePenguin06/PlateRace:
+    - name: Devpost
+      url: https://devpost.com/software/wip-jg3vpe
 ---
 
 <!-- pages/projects.md -->
@@ -29,6 +34,7 @@ contribution_badges:
     class="row row-cols-1 row-cols-md-2"
     data-user="{{ page.github_user }}"
     data-badges="{{ page.contribution_badges | jsonify | escape }}"
+    data-links="{{ page.contribution_links | jsonify | escape }}"
     data-exclude="{% for p in site.projects %}{% if p.github %}{{ p.github | downcase }} {% endif %}{% endfor %}{% for pkg in site.data.replication_packages %}{{ pkg.github | downcase }} {% endfor %}"
   >
     <div class="col repo-empty">Loading contributions from GitHub…</div>
@@ -66,6 +72,9 @@ contribution_badges:
     var exclude = box.dataset.exclude.split(" ").filter(Boolean);
     var badges = {};
     try { badges = JSON.parse(box.dataset.badges) || {}; } catch (e) {}
+    var links = {};
+    try { links = JSON.parse(box.dataset.links) || {}; } catch (e) {}
+    var linkIcon = '<svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5C2 2.784 2.784 2 3.75 2Zm6.854-1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1Z"></path></svg>';
     var allPrsUrl = "https://github.com/pulls?q=is%3Apr+is%3Amerged+author%3A" + user;
     var langColors = { Python: "#3572A5", Java: "#b07219", JavaScript: "#f1e05a", TypeScript: "#3178c6", C: "#555555", "C++": "#f34b7d", Rust: "#dea584", Go: "#00ADD8", Kotlin: "#A97BFF", R: "#198CE7", Shell: "#89e051", HTML: "#e34c26", TeX: "#3D6117", "Jupyter Notebook": "#DA5B0B" };
     var repoIcon = '<svg class="repo-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path></svg>';
@@ -106,6 +115,9 @@ contribution_badges:
               '<div class="repo-meta">' +
               (lang ? '<span class="repo-meta-item"><span class="repo-lang-dot" style="background-color:' + (langColors[lang] || "#8b949e") + '"></span>' + esc(lang) + "</span>" : "") +
               '<a class="repo-meta-item" href="' + prsUrl + '">' + prIcon + c.count + " merged pull request" + (c.count === 1 ? "" : "s") + "</a>" +
+              (links[c.name] || []).map(function (l) {
+                return '<a class="repo-meta-item" href="' + esc(l.url) + '">' + linkIcon + esc(l.name) + "</a>";
+              }).join("") +
               "</div></div></div>";
           }).join("");
         });
