@@ -53,10 +53,22 @@ contribution_links:
 
 <script>
   (function () {
+    var TTL = 60 * 60 * 1000;
+    function gh(url) {
+      var key = "gh:" + url, cached = null;
+      try { cached = JSON.parse(localStorage.getItem(key)); } catch (e) {}
+      if (cached && Date.now() - cached.t < TTL) return Promise.resolve(cached.d);
+      return fetch(url)
+        .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+        .then(function (d) {
+          try { localStorage.setItem(key, JSON.stringify({ t: Date.now(), d: d })); } catch (e) {}
+          return d;
+        })
+        .catch(function (err) { if (cached) return cached.d; throw err; });
+    }
     // Live star/fork counts for repository cards with `github: owner/repo` set.
     document.querySelectorAll(".repo-card[data-repo]").forEach(function (card) {
-      fetch("https://api.github.com/repos/" + card.dataset.repo)
-        .then(function (r) { return r.ok ? r.json() : null; })
+      gh("https://api.github.com/repos/" + card.dataset.repo)
         .then(function (d) {
           if (!d) return;
           [["stars", d.stargazers_count], ["forks", d.forks_count]].forEach(function (pair) {
@@ -88,8 +100,7 @@ contribution_links:
     function message(html) {
       box.innerHTML = '<div class="col repo-empty">' + html + "</div>";
     }
-    fetch("https://api.github.com/search/issues?per_page=100&q=" + encodeURIComponent("type:pr is:merged author:" + user))
-      .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+    gh("https://api.github.com/search/issues?per_page=100&q=" + encodeURIComponent("type:pr is:merged author:" + user))
       .then(function (data) {
         var repos = {};
         data.items.forEach(function (pr) {
@@ -100,8 +111,7 @@ contribution_links:
         var names = Object.keys(repos).sort(function (a, b) { return repos[b] - repos[a]; });
         if (!names.length) { message("No merged pull requests to other repositories yet."); return; }
         return Promise.all(names.map(function (name) {
-          return fetch("https://api.github.com/repos/" + name)
-            .then(function (r) { return r.ok ? r.json() : {}; })
+          return gh("https://api.github.com/repos/" + name)
             .catch(function () { return {}; })
             .then(function (info) { return { name: name, count: repos[name], info: info }; });
         })).then(function (list) {
