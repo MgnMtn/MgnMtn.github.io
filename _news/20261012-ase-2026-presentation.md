@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-📣 Good week in Munich at ASE 2026. Great to have four of the ASET Lab presenting our work throughout the conference. See some photos on the [ASET Group Website](https://aset-lab.github.io/news/2026_10_20_ase2026_visit/)!
+📣 Good week in Munich at [ASE 2026](https://conf.researchr.org/home/ase-2026). Great to have four of the ASET Lab presenting our work throughout the conference. See some photos on the [ASET Group Website](https://aset-lab.github.io/news/2026_10_20_ase2026_visit/)!
